@@ -65,49 +65,11 @@ const QRCodeScanner = ({
   };
 
   return (
-    <View style={[styles.container, style]}>
-      <BarCodeScanner
-        onBarCodeScanned={!scanned ? handleScan : undefined}
-        style={StyleSheet.absoluteFillObject}
-      />
-      <View style={styles.overlay}>
-        <View style={styles.unfocusedContainer} />
-        <View style={styles.focusedContainer}>
-          <View style={styles.focusedBox} />
-        </View>
-        <View style={styles.unfocusedContainer} />
-      </View>
-    </View>
+    <BarCodeScanner
+      onBarCodeScanned={!scanned ? handleScan : undefined}
+      style={[StyleSheet.absoluteFillObject, { style }]}
+    />
   );
 };
-
-const overlayColor = "rgba(0,0,0,0.6)"; // Background color for unfocused areas
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: "column",
-  },
-  overlay: {
-    flex: 1,
-    flexDirection: "column",
-    justifyContent: "center",
-  },
-  unfocusedContainer: {
-    flex: 1,
-    backgroundColor: overlayColor,
-  },
-  focusedContainer: {
-    flexDirection: "row",
-  },
-  focusedBox: {
-    flex: 1,
-    height: 250,
-    borderWidth: 2,
-    borderColor: "#FFF",
-    borderRadius: 8,
-    backgroundColor: "transparent",
-  },
-});
 
 export default QRCodeScanner;
