@@ -61,13 +61,14 @@ Before scanning QR codes, your app must ask the user for permission to access th
 import { useState, useEffect } from 'react';
 import { Text, View } from 'react-native';
 import QRCodeScanner from 'expo-qrcode-scanner';
+import {BarCodeScanner} from 'expo-barcode-scanner';
 
 const CameraScreen = () => {
     const [hasPermission, setHasPermission] = useState(null);
 
     useEffect(() => {
         (async () => {
-            const { status } = await Camera.requestPermissionsAsync();
+            const { status } = await BarCodeScanner.requestPermissionsAsync();
             setHasPermission(status === 'granted');
         })();
     }, []);

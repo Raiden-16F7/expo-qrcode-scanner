@@ -1,15 +1,20 @@
 {
   "name": "expo-qrcode-scanner",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "QR Code Scanner component for Expo apps with scan limit in center",
-  "main": "src/index.js",
+  "main": "src/qrCodeScanner.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
-    "react": "^17.0.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-43.0.0.tar.gz",
-    "expo-barcode-scanner": "~11.0.2"
+    "expo":"*",
+    "expo-barcode-scanner": "^12.7.0"
+  },
+  "devDependencies":{
+	  "expo-module-scripts":"^3.0.0"
+  },
+  "dependencies":{
+	  "expo-image-loader":"~4.4.0"
   },
   "keywords": [
     "expo",
@@ -21,7 +26,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Raiden-16F7/expo-qrcode-scanner.git"
+    "url": "https://github.com/Raiden-16F7/expo-qrcode-scanner.git"
   },
   "bugs": {
     "url": "https://github.com/Raiden-16F7/expo-qrcode-scanner/issues"
