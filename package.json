@@ -1,6 +1,6 @@
 {
   "name": "expo-qrcode-scanner",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "QR Code Scanner component for Expo apps with scan limit in center",
   "main": "src/qrCodeScanner.js",
   "scripts": {

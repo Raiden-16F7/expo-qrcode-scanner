@@ -101,8 +101,9 @@ The `QRCodeScannerComponent` accepts the following props:
 | `onScanSuccess` | Function | -       | No       | A callback function invoked when a QR code is successfully scanned. |
 | `onScanFail`    | Function | -       | No       | A callback function invoked when a scan attempt fails.       |
 | `toleranceFactor` | Number | 0.5     | No       | A number representing the tolerance factor for QR code centering. |
-| `minSize`       | Number   | -       | Yes      | The minimum size for a QR code to be considered valid.       |
-| `maxSize`       | Number   | -       | Yes      | The maximum size for a QR code to be considered valid.       |
+| `minSize`       | Number   | 140       | Yes      | The minimum size for a QR code to be considered valid.       |
+| `maxSize`       | Number   | 220       | Yes      | The maximum size for a QR code to be considered valid.       |
+| `scanningInfinitely`  | boolean  | false       | Yes      | Scan QR code continously   |
 
 ## Contributing 🤝
 
