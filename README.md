@@ -26,7 +26,7 @@ Then, you can use the `QRCodeScanner` in your component's render method:
 ```javascript
 import React from 'react';
 import { View } from 'react-native';
-import QRCodeScannerComponent from 'your-module-name';
+import QRCodeScanner from 'expo-qrcode-scanner';
 
 const YourComponent = () => {
     const handleScanSuccess = (scanData) => {
@@ -90,17 +90,18 @@ const CameraScreen = () => {
     );
 };
 ```
-
 ## Props 📐
 
 The `QRCodeScannerComponent` accepts the following props:
 
-- `style` (optional): A custom style object to apply to the scanner component.
-- `onScanSuccess` (optional): A callback function that is invoked when a QR code is successfully scanned. It receives the scan data as its argument.
-- `onScanFail` (optional): A callback function that is invoked when a scan attempt fails.
-- `toleranceFactor` (optional, default: 0.5): A number representing the tolerance factor for QR code centering.
-- `minSize` (mandatory): A number specifying the minimum size for a QR code to be considered valid.
-- `maxSize` (mandatory): A number specifying the maximum size for a QR code to be considered valid.
+| Prop            | Type     | Default | Required | Description                                                  |
+|-----------------|----------|---------|----------|--------------------------------------------------------------|
+| `style`         | Object   | -       | No       | A custom style object to apply to the scanner component.     |
+| `onScanSuccess` | Function | -       | No       | A callback function invoked when a QR code is successfully scanned. |
+| `onScanFail`    | Function | -       | No       | A callback function invoked when a scan attempt fails.       |
+| `toleranceFactor` | Number | 0.5     | No       | A number representing the tolerance factor for QR code centering. |
+| `minSize`       | Number   | -       | Yes      | The minimum size for a QR code to be considered valid.       |
+| `maxSize`       | Number   | -       | Yes      | The maximum size for a QR code to be considered valid.       |
 
 ## Contributing 🤝
 
