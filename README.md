@@ -8,9 +8,9 @@ This module provides a React Native component for scanning QR codes, specificall
 To use this module in your Expo project, install it via npm or yarn:
 
 ```bash
-npm install your-module-name
+npm install expo-qrcode-scanner
 # or
-yarn add your-module-name
+yarn add expo-qrcode-scanner
 ```
 
 ## Usage 🚀
